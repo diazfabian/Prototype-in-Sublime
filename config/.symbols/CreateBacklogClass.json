@@ -1,0 +1,68 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "CreateBacklogClass", 
+    "tableDeclaration": {
+        "type": "CreateBacklogClass", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 1
+        }, 
+        "name": "CreateBacklogClass"
+    }, 
+    "key": "01p61000001w5kNAAQ", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 55, 
+                "line": 3
+            }, 
+            "name": "backlog"
+        }, 
+        {
+            "type": "Backlog__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 5
+            }, 
+            "name": "b"
+        }
+    ], 
+    "id": "01p61000001w5kNAAQ", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "insertBacklog", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "backlog"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 3
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

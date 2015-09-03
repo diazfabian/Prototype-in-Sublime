@@ -1,0 +1,126 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "objTickets", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 3
+            }, 
+            "type": "Tickets__c"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "ticketsController", 
+            "parameters": [
+                {
+                    "type": "StandardController", 
+                    "name": "controller"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 4
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "ticketsController", 
+    "tableDeclaration": {
+        "type": "ticketsController", 
+        "modifiers": [
+            "public"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 15, 
+            "line": 1
+        }, 
+        "name": "ticketsController"
+    }, 
+    "key": "01p61000001Z8jLAAS", 
+    "variables": [
+        {
+            "type": "StandardController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 59, 
+                "line": 4
+            }, 
+            "name": "controller"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 10
+            }, 
+            "name": "statusOptions"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 11
+            }, 
+            "name": "profileId"
+        }, 
+        {
+            "type": "DescribeFieldResult", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 29
+            }, 
+            "name": "status"
+        }, 
+        {
+            "type": "PicklistEntry", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 39, 
+                "line": 30
+            }, 
+            "name": "f"
+        }
+    ], 
+    "id": "01p61000001Z8jLAAS", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getLoadValuesPicklist", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 9
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }
+    ]
+}

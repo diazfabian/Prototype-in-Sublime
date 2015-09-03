@@ -1,0 +1,41 @@
+apex:page standardController="Backlog__c" extensions="TheController">
+    <apex:stylesheet value="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"/>
+    <apex:includeScript value="//code.jquery.com/jquery-1.10.2.js"/>
+    <apex:includeScript value="//code.jquery.com/ui/1.11.2/jquery-ui.js"/>
+    
+    <script>
+        $(document).ready(function(){
+            $(document.getElementById("{!$Component.theForm.thePageBlock.theTable}")).find("tbody").sortable();
+        });
+    </script>
+    <script type="text/javascript">
+       var j$ = jQuery.noConflict();
+       
+       j$(document).ready(function(){
+            j$( "#sortable" ).sortable({
+                update: function(event, ui) {
+                    var sortOrder = j$("#sortable table").sortable('serialize', {attribute: 'data-id'});
+                    updateSortOrder(sortOrder);
+                }
+            });
+            j$( "#sortable" ).disableSelection();
+
+       });
+    </script>
+    
+    <apex:form id="theForm">
+        <apex:pageBlock id="thePageBlock" >
+            <h1>
+               Order by Priority
+            </h1>
+            <apex:pageBlockTable value="{!backlog}" var="t" id="theTable">
+                <apex:column value="{!t.Name}"></apex:column>
+                <apex:column value="{!t.Backlog__c}"></apex:column>
+                              
+                    
+            </apex:pageBlockTable>
+           
+        </apex:pageBlock>    
+       
+    </apex:form>
+</apex:page>

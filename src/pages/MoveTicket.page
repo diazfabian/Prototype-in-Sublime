@@ -1,0 +1,31 @@
+<!-- <apex:page standardController="Backlog__c" extensions="MoveTicketFromProductToSprint" id="page"> -->
+<apex:page controller="MoveTicketFromProductToSprint" id="page">
+    <apex:form >
+        <apex:pageMessages id="showmsg"></apex:pageMessages>
+        <apex:panelGrid columns="3" id="abcd">
+            <h1>
+               Product Backlog
+            </h1><br/>
+            <apex:selectList id="sel1" value="{!leftselected}" multiselect="true" style="width:200px" size="10">
+                <apex:selectOptions value="{!unselectedvalues}" />
+            </apex:selectList>
+                <apex:panelGroup >
+                    <br/>
+                    <apex:image value="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/20-48.png" style="margin-top:150px">
+                        <apex:actionSupport event="onclick" action="{!selectclick}" reRender="abcd"/>
+                    </apex:image>
+                    <br/><br/>
+                    <apex:image value="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/9-48.png">
+                        <apex:actionSupport event="onclick" action="{!unselectclick}" reRender="abcd"/>
+                    </apex:image>
+                </apex:panelGroup>
+            <h1>
+               Sprint Backlog
+            </h1><br/>
+            <apex:selectList id="sel2" value="{!rightselected}" multiselect="true" style="width:200px" size="10">
+                <apex:selectOptions value="{!SelectedValues}" />
+            </apex:selectList>
+        </apex:panelGrid>
+        <apex:commandButton value="Submit" action="{!ButtonActionSave}" rerender="showmsg"/>
+    </apex:form>
+</apex:page>

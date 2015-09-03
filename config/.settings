@@ -1,0 +1,19 @@
+{
+    "username": "erick.diaz@sena2015.globant.com", 
+    "environment": "developer", 
+    "project_name": "Prototype", 
+    "workspace": "C:\\Users\\erick.diaz\\workspace", 
+    "org_url": "", 
+    "namespace": "", 
+    "id": "OX8WF3NYB6L33H7NXNDVXDF8W40U9Y4X", 
+    "metadata_container": "1dc610000005LZ5AAM", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "StaticResource", 
+        "CustomObject", 
+        "Profile"
+    ]
+}

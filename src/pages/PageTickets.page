@@ -1,0 +1,53 @@
+<apex:page standardController="Tickets__c" extensions="ticketsController" tabStyle="Tickets__c">
+    <apex:sectionHeader title="{!$ObjectType.Tickets__c.label} Edit" subtitle="New Ticket"/>
+    <apex:form >
+	    <apex:messages />
+	    <apex:pageBlock title="Edit Ticket" mode="edit">
+			<apex:pageBlockButtons > 
+				<apex:commandButton value="Save" action="{!save}"/>
+				<apex:commandButton value="Cancel" action="{!cancel}" immediate="true"/>
+			</apex:pageBlockButtons>    
+		    <apex:actionRegion >
+		    <apex:pageBlockSection title="Information" columns="1">
+			    <apex:inputField value="{!Tickets__c.Backlog__c}" id="fBacklog" required="true"/>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Tickets Name" for="fName"/>
+					<apex:outputPanel >
+						<div class = "requiredInput">
+							<div class = "requiredBlock"></div>
+							<apex:inputText value="{!Tickets__c.Name}" id="fName" styleClass="Name" required="true" label="Name Tickets"/>
+						</div> 
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel Value="Type of Ticket"  for="fType"/>
+					<apex:outputPanel >
+						<div class = "requiredInput">
+							<div class = "requiredBlock"></div>
+							<apex:selectList value="{!Tickets__c.Type_Of_Ticket__c  }" id="fType" multiselect="false" size="1" style="width:173px;">
+							<apex:selectOption itemValue="New Feature" itemLabel="New Feature"/>
+							<apex:selectOption itemValue="Change Request" itemLabel="Change Request"/>
+							<apex:selectOption itemValue="Other Task" itemLabel="Other Task"/>
+							<apex:selectOption itemValue="Bug" itemLabel="Bug"/>
+							</apex:selectList>
+						</div>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				<apex:selectList value="{!Tickets__c.Status__c}"  multiselect="false" size="1" id="fStatus" style="width:173px;">
+				<apex:selectOptions value="{!loadValuesPicklist}"/>
+				</apex:selectList>
+				<apex:inputText value="{!Tickets__c.Story_Point__c}" id="fStoryPoint" styleClass="Story_Point__c"/>     
+				<apex:pageBlockSectionItem >
+				    <apex:outputLabel value="Description" for="fDescription"/>
+					<apex:outputPanel >
+					   <div class = "requiredInput">
+							<div class = "requiredBlock"></div>
+							<apex:inputTextArea value="{!Tickets__c.Description__c}" id="fDescription" required="true" style="width:400px;height:100px"/>           
+						</div>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>        
+			</apex:pageBlockSection>
+			</apex:actionRegion> 
+		</apex:pageBlock>
+    </apex:form>
+</apex:page>
